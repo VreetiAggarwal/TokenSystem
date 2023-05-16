@@ -1,0 +1,14 @@
+.box {
+  margin: 2rem 10rem 0 10rem;
+  border: 1px solid black;
+}
+
+.p {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.token {
+  font-size: 4rem;
+  text-align: center;
+}

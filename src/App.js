@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import { socket } from "./socket";
+import Patients from "./components/Patient";
+import TokenGenerator from "./Token";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <Patients /> */}
+      <Routes>
+        <Route path="/" element={<Patients />}></Route>
+        <Route path="/token" element={<TokenGenerator />}></Route>
+      </Routes>
     </div>
   );
 }
